@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/nschmidtty/Instanews-Prject2#readme",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.1.2"
   }
 }
