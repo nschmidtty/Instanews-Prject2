@@ -1,6 +1,3 @@
-$(function(){
-
-  console.log('This is my lad....');
-  
-
+$(document).ready(function () {
+  //your code here
 });

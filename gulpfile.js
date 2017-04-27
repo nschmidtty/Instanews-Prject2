@@ -1,20 +1,33 @@
-var gulp = require('gulp');
+var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
+    rename = require('gulp-rename'),
+    browserSync = require('browser-sync'),
+    eslint = require('gulp-eslint'),
+    prettyError = require('gulp-prettyerror'),
+    sass = require('gulp-sass'),
+    autoprefixer = require('gulp-autoprefixer'),
+    cssnano = require('gulp-cssnano'),
     rename = require('gulp-rename');
-    browserSync = require('browser-sync');
-    eslint = require('gulp-eslint');
 
-gulp.task('default', ['say_hello', 'watch', 'browser-sync']);
-
-gulp.task('say_hello', function(){
-    console.log('Hello!');
-});
-
-
+gulp.task('default', ['watch', 'browser-sync']);
 
 gulp.task('watch', function() {
    gulp.watch('js/*.js', ['scripts']);
+   gulp.watch('scss/*.scss', ['scss']);
 });
+
+gulp.task('scss', function() {
+   gulp.src('./scss/style.scss')
+      .pipe(prettyError())
+      .pipe(sass())
+      .pipe(autoprefixer({
+         browsers: ['last 2 versions']
+      }))
+      .pipe(cssnano())
+      .pipe(rename('style.min.css'))
+      .pipe(gulp.dest('./build/css'))
+});
+
 
 gulp.task('scripts', ['lint'], function(){
   gulp.src('./js/*.js') // What files do we want gulp to consume?
@@ -23,6 +36,7 @@ gulp.task('scripts', ['lint'], function(){
     .pipe(gulp.dest('./build/js')) // Where do we put the result?
 });
 
+
 // Static server
 gulp.task('browser-sync', function() {
     browserSync.init({
@@ -30,8 +44,9 @@ gulp.task('browser-sync', function() {
             baseDir: "./"
         }
     });
-    gulp.watch(['./build/*.js', './css/style.css']).on('change', browserSync.reload);
+    gulp.watch(['./build/*.js', './scss/*.scss']).on('change', browserSync.reload);
 });
+
 
 gulp.task('lint', function(){
   return gulp.src(['./js/*.js','!node_modules/**'])
