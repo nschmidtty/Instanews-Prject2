@@ -1,6 +1,6 @@
-console.log
 $(function(){
 
-  console.log('This is my lad....')
+  console.log('This is my lad....');
+  
 
 });
