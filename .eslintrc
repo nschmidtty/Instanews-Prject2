@@ -13,12 +13,10 @@
     "quotes": [ 1, "single"]
   },
   "globals": {
-    "globals": {
       "jQuery": false,
       "$": false
   },
   "env": {
     "browser": true
-  }
   }
 }

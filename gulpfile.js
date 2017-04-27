@@ -44,7 +44,7 @@ gulp.task('browser-sync', function() {
             baseDir: "./"
         }
     });
-    gulp.watch(['./build/*.js', './scss/*.scss']).on('change', browserSync.reload);
+    gulp.watch(['./build/*.js', './scss/*.scss', './index.html']).on('change', browserSync.reload);
 });
 
 
