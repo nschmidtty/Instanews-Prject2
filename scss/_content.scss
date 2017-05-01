@@ -40,7 +40,8 @@ select{
 
 .news-stories{
   display: flex;
-  flex-wrap: wrap;  
+  flex-wrap: wrap;
+  justify-content: center;
     a{
       color: white;
       flex: 1 0 100%;
@@ -48,6 +49,7 @@ select{
       background-repeat: no-repeat;
       background-size: cover;
       height: 420px;
+      text-align: center;
     }
 }
 
