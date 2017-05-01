@@ -1,19 +1,21 @@
 <!DOCTYPE <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>InstaNews</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="build/css/style.min.css" rel="stylesheet">
-  </head>
-  <body>
 
-    <header>
-      <img src="./lib/images/nyt-logo.svg">
+<head>
+  <title>InstaNews</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="build/css/style.min.css" rel="stylesheet">
+</head>
 
-      <h1>Choose a section:</h1>
+<body>
+
+  <header>
+    <img src="./lib/images/nyt-logo.svg" class="img-no-clicked" id="logo">
+
       
       <form>
+        <h1>Choose a section:</h1>
         <select class="news-sections">
           <option value="default">Sections...</option>
           <option value="world">World</option>
@@ -21,26 +23,23 @@
           <option value="science">Science</option>
           <option value="business">Business</option>
           <option value="sports">Sports</option>
-          <option value="fastion">Fashion</option>
-        </select>      
+          <option value="fashion">Fashion</option>
+        </select>
       </form>
-    </header>
+  </header>
 
 
-    <div class="news-stories">
-    </div>    
-    
-    
-    <footer>
-      <h2>&#169; Copyright 2016 <span>instanews</span></h2>  
-    </footer>
-    
+  <div class="news-stories">
+  </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-		<script src="build/js/main.min.js"></script>
-  </body>  
+
+  <footer>
+    <h2>&#169; Copyright 2016 <span>instanews</span></h2>
+  </footer>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="build/js/main.min.js"></script>
+</body>
+
 </html>
-
-
-
-

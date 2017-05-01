@@ -1,65 +1,100 @@
-
-
-html{
+html {
   font-size: $base-font-size;
   width: 100%;
   height: 100%;
 }
 
-
-body{
+body {
   width: 100%;
   height: 100%;
   background-color: black;
   color: white;
+  margin: 0px;
 }
 
-header{
+header {
   height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 30px 0;
+  @include tablet {
+    flex-direction: row;
+  }
+  @include desktop {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
 }
 
-img{
+.img-no-clicked {
   height: 220px;
   width: 220px;
 }
 
-h1{
-  font-family: "opensans-light";
-  color: white;
-  font-size: $base-font-size;
-  margin: 20px 0;
+.img-clicked {
+  height: 150px;
+  width: 150px;
+  @include tablet {
+    height: 70px;
+    width: 70px;
+  }
 }
 
-select{
-  border-radius: 30px;
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h1 {
+    font-family: "opensans-light";
+    color: white;
+    font-size: $base-font-size;
+    margin: 20px 0;
+  }
+  select {
+    border-radius: 30px;
+  }
 }
 
-.news-stories{
+.news-stories {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-    a{
-      color: white;
-      flex: 1 0 100%;
-      max-width: 100%;
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 420px;
-      text-align: center;
+  a {
+    text-decoration: none;
+    flex: 1 0 100%;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 420px;
+    display: flex;
+    align-items: flex-end;
+    @include tablet {
+      flex: 1 0 33.33%;
+      max-width: 33.33%;
     }
+    @include desktop {
+      flex: 1 0 25%;
+      max-width: 25%;
+    }
+    p {
+      margin: 0px;
+      padding: 2px 5px;
+      background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+      color: white;
+      text-align: left;
+    }
+  }
 }
 
-footer{
+footer {
   height: 20%;
   display: flex;
   justify-content: center;
 }
 
-h2{
+h2 {
   font-family: "opensans-bold";
   color: $medium-grey;
   font-size: 1rem;
