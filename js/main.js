@@ -2,6 +2,8 @@ $(function () {
 
   $('select').on('change', function () {
 
+    $('#loading-image').show();
+
     $('header').css('height', 'auto');
     $('img').css('height', 'auto');
 
@@ -24,8 +26,10 @@ $(function () {
 
         $.each(news_img, function (index, value) {
           $('.news-stories').append('<a href="' + value.url + '" id="' + index + '"><p>' + value.abstract + '</p></a>');
-          $('#' + index).css('background-image', 'url(' + value.multimedia[4].url) + ')';
+          $('#' + index).css('background-image', 'url(' + value.multimedia[4].url + ')');
         });
+
+        $('#loading-image').hide();
 
       })
 
