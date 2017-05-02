@@ -19,9 +19,11 @@ header {
   align-items: center;
   flex-direction: column;
   margin: 30px 0;
+  
   @include tablet {
     flex-direction: row;
   }
+  
   @include desktop {
     flex-direction: row;
     justify-content: flex-start;
@@ -36,6 +38,7 @@ header {
 .img-clicked {
   height: 150px;
   width: 150px;
+
   @include tablet {
     height: 70px;
     width: 70px;
@@ -46,22 +49,31 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
   h1 {
     font-family: "open_sanslight";
     color: white;
     font-size: $base-font-size;
     margin: 20px 0;
   }
+  
   select {
     border-radius: 30px;
     padding: 5px;
   }
 }
 
-#loading-image{
-  display: none;
+.loading-space {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#loading-image {
   height: 100px;
   width: 100px;
+  display: none;
   margin: 20px;
 }
 
@@ -69,6 +81,7 @@ form {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  
   a {
     text-decoration: none;
     flex: 1 0 100%;
@@ -78,14 +91,17 @@ form {
     height: 420px;
     display: flex;
     align-items: flex-end;
+    
     @include tablet {
       flex: 1 0 33.33%;
       max-width: 33.33%;
     }
+    
     @include desktop {
       flex: 1 0 25%;
       max-width: 25%;
     }
+    
     p {
       margin: 0px;
       padding: 2px 5px;

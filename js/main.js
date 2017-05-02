@@ -5,7 +5,7 @@ $(function () {
     $('#loading-image').show();
 
     $('header').css('height', 'auto');
-    $('img').css('height', 'auto');
+    // $('img').css('height', 'auto');
 
     document.getElementById('logo').classList.add('img-clicked');
     document.getElementById('logo').classList.remove('img-no-clicked');
@@ -29,8 +29,7 @@ $(function () {
           $('#' + index).css('background-image', 'url(' + value.multimedia[4].url + ')');
         });
 
-        $('#loading-image').hide();
-
+        $('.loading-space').hide();
       })
 
       .fail(function (err) {
