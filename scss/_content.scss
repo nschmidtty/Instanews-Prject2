@@ -62,10 +62,15 @@ form {
   }
 }
 
-#loading-image{
-  display: none;
+#loading-space {
   height: 100px;
-  width: 100px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+}
+
+#loading-image {
+  display: none;
   margin: 20px;
 }
 

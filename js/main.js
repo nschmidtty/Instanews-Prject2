@@ -4,8 +4,8 @@ $(function () {
 
     $('#loading-image').show();
 
-    $('header').css('height', 'auto');
-    $('img').css('height', 'auto');
+    // $('header').css('height', 'auto');
+    // $('img').css('height', 'auto');
 
     document.getElementById('logo').classList.add('img-clicked');
     document.getElementById('logo').classList.remove('img-no-clicked');
