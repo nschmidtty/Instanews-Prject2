@@ -2,7 +2,7 @@ $(function () {
 
   $('select').on('change', function () {
 
-    $('#loading-image').show();
+    $('.loading-space').show();
 
     // $('header').css('height', 'auto');
     // $('img').css('height', 'auto');
