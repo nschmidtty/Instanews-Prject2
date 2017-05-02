@@ -2,9 +2,9 @@ $(function () {
 
   $('select').on('change', function () {
 
-    $('.loading-space').show();
+    $('#loading-image').show();
 
-    // $('header').css('height', 'auto');
+    $('header').css('height', 'auto');
     // $('img').css('height', 'auto');
 
     document.getElementById('logo').classList.add('img-clicked');
@@ -29,8 +29,7 @@ $(function () {
           $('#' + index).css('background-image', 'url(' + value.multimedia[4].url + ')');
         });
 
-        $('#loading-image').hide();
-
+        $('.loading-space').hide();
       })
 
       .fail(function (err) {
