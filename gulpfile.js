@@ -6,8 +6,7 @@ var gulp = require('gulp'),
     prettyError = require('gulp-prettyerror'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
-    cssnano = require('gulp-cssnano'),
-    rename = require('gulp-rename');
+    cssnano = require('gulp-cssnano')
 
 gulp.task('default', ['watch', 'browser-sync']);
 

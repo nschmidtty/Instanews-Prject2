@@ -25,7 +25,7 @@ $(function () {
         }).slice(0, 12);
 
         $.each(news_img, function (index, value) {
-          $('.news-stories').append('<a href="' + value.url + '" id="' + index + '"><p>' + value.abstract + '</p></a>');
+          $('.news-stories').append('<a href="' + value.url + '" id="' + index + '" class = "news-link"><p class = "abstract">' + value.abstract + '</p></a>');
           $('#' + index).css('background-image', 'url(' + value.multimedia[4].url + ')');
         });
 
@@ -36,4 +36,15 @@ $(function () {
         throw err;
       });
   });
+
+  $('select').selectric();
+
+  $('.news-sections').change(function(){
+    $("header").animate({left: '250px',
+        opacity: '0.5',
+        height: '150px',
+        width: '150px'});
+  })
+
+
 });
